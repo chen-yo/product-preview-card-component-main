@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+:root {
+  /* Primary */
+  --clr-darkCyan: 158, 36%, 37%;
+  --clr-cream: 30, 38%, 92%; /*used*/
+
+  --clr-darkCyan-500: 158, 36%, 18%;
+
+  /* Neutral */
+  --clr-veryDarkBlue: 212, 21%, 14%;
+  --clr-darkGreyishBlue: 228, 12%, 48%; /*used*/
+  --clr-white: 0, 0%, 100%;
+
+  --font-size: 1.4rem;
+  --fw-normal: 500;
+  --fw-bold: 700;
+
+  --ff-basic: "Montserrat", sans-serif;
+  --ff-accent: "Fraunces", serif;
+
+  --border-radius: 10px;
+}
+
+html {
+  font-size: 62.5%; /*16px -> 10 px*/
+}
+
+body {
+  background-color: hsl(var(--clr-cream));
+  font-size: var(--font-size);
+  font-family: var(--ff-basic);
+  line-height: 1.5;
+  font-optical-sizing: auto;
+  font-weight: var(--fw-normal);
+  font-style: normal;
+  color: hsl(var(--clr-darkGreyishBlue));
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  background-color: hsl(var(--clr-white));
+  max-width: 600px;
+  display: grid;
+
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.product__picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product__details {
+  padding: 3rem;
+}
+
+
+
+.product .product__name {
+  font-size: 3rem;
+  color: hsl(var(--clr-veryDarkBlue));
+  line-height: 2.75rem;
+}
+
+.product .product__type {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.product__price {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product__price-current {
+  color: hsl(var(--clr-darkCyan));
+  font-size: 3rem;
+}
+
+
+.product__price-original {
+  /* text-decoration: line-through; */
+  font-size: 1.25rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  background-color: hsl(var(--clr-darkCyan));
+  border-radius: 5px;
+  padding: 1rem 4rem;
+  color: hsl(var(--clr-white));
+  border: 0;
+  flex-wrap: wrap;
+}
+
+.button:is(:active, :focus) {
+  background-color: hsl(var(--clr-darkCyan-500));
+}
+
+.product__details {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media only screen and (min-width: 600px) {
+  .product {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Utilities */
+
+.u-ff-accent {
+  font-family: var(--ff-accent) ;
+  font-optical-sizing: auto;
+  font-weight: var(--fw-bold);
+}
+
+/* Taken from  https://getbootstrap.com/docs/5.3/dist/css/bootstrap.css*/
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.visually-hidden:not(caption),
+.visually-hidden-focusable:not(:focus):not(:focus-within):not(caption) {
+  position: absolute !important;
+}

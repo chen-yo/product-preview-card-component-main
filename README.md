@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://chen-yo.github.io/product-preview-card-component-main/
-- Live Site URL: https://github.com/chen-yo/product-preview-card-component-main
+- Solution URL: https://github.com/chen-yo/product-preview-card-component-main
+- Live Site URL: https://chen-yo.github.io/product-preview-card-component-main/
 
 ## My process
 
